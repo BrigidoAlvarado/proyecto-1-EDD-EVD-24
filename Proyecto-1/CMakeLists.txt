@@ -11,4 +11,12 @@ add_executable(Proyecto_1 main.cpp
         includes/admin/Admin.h
         src/admin/Admin.cpp
         includes/admin/AdminMenu.h
-        src/admin/AdminMenu.cpp)
+        src/admin/AdminMenu.cpp
+        includes/SparseMatrix/MatrixNode.h
+        includes/User.h
+        src/SparseMatrix/MatrixNode.cpp
+        src/User.cpp
+        includes/SparseMatrix/SparseMatrix.h
+        src/SparseMatrix/SparseMatrix.cpp
+        includes/avlTree/AvlTree.h
+        src/avlTree/AvlTree.cpp)
