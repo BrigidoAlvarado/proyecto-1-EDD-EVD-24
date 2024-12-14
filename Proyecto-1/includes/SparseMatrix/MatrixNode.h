@@ -28,13 +28,13 @@ private:
     public:
     MatrixNode()
     {
-        next = NULL;
-        prev = NULL;
-        up = NULL;
-        down = NULL;
-        forward = NULL;
-        backward = NULL;
-        user = NULL;
+        next = nullptr;
+        prev = nullptr;
+        up = nullptr;
+        down = nullptr;
+        forward = nullptr;
+        backward = nullptr;
+        user = nullptr;
     };
 
     ~MatrixNode();

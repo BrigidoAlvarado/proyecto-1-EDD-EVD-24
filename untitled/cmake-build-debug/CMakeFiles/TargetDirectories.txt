@@ -1,0 +1,3 @@
+/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled/cmake-build-debug/CMakeFiles/untitled.dir
+/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/Proyecto-1/cmake-build-debug"
+			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/308/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/308/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/308/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/Proyecto-1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/Proyecto-1"
+			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -655,7 +655,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/305/bin/ninja/linux/x64/ninja"
+			"value" : "/snap/clion/308/bin/ninja/linux/x64/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -843,7 +843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Proyecto_1"
+			"value" : "untitled"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -887,7 +887,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30"
+			"value" : "/snap/clion/308/bin/cmake/linux/x64/share/cmake-3.30"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1142,7 +1142,19 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Proyecto_1_BINARY_DIR",
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "untitled_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1151,10 +1163,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/Proyecto-1/cmake-build-debug"
+			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled/cmake-build-debug"
 		},
 		{
-			"name" : "Proyecto_1_IS_TOP_LEVEL",
+			"name" : "untitled_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1166,7 +1178,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Proyecto_1_SOURCE_DIR",
+			"name" : "untitled_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1175,19 +1187,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/Proyecto-1"
-		},
-		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
+			"value" : "/home/brigidoalvarado/Documentos/proyecto-1-EDD/untitled"
 		}
 	],
 	"kind" : "cache",
