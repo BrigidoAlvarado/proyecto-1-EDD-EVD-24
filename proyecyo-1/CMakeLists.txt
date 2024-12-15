@@ -11,4 +11,6 @@ add_executable(proyecyo_1 main.cpp
         src/AdminMenu.cpp
         src/Admin.cpp
         includes/User.h
-        src/User.cpp)
+        src/User.cpp
+        includes/sparseMatrix/MatrixNode.h
+        src/sparseMatrix/MatrixNode.cpp)

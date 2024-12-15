@@ -1,12 +1,7 @@
 # ninja log v6
 6	758	1734254544360722820	CMakeFiles/proyecyo_1.dir/main.cpp.o	c9e16f166c5fc454
 1	508	1734255205508127760	CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o	1da72b0c262275fe
-508	565	1734255206015132593	proyecyo_1	e210611fc33a2548
-1	492	1734255205508127760	CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o	eee5bbe3f0d1feb4
-1	502	1734255205508127760	CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o	e21ea37c5d2ddf2e
-1	531	1734255824759748953	CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o	e21ea37c5d2ddf2e
-2	533	1734255824760748885	CMakeFiles/proyecyo_1.dir/src/User.cpp.o	25c856b34230bfca
-0	322	1734255913938046701	CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o	eee5bbe3f0d1feb4
-323	376	1734255914261027349	proyecyo_1	37bea807c0b524de
+464	524	1734256417430770953	proyecyo_1	37bea807c0b524de
 1	311	1734256161658414405	CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o	eee5bbe3f0d1feb4
-311	373	1734256161968400957	proyecyo_1	37bea807c0b524de
+3	464	1734256416970786088	CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o	e21ea37c5d2ddf2e
+2	533	1734255824760748885	CMakeFiles/proyecyo_1.dir/src/User.cpp.o	25c856b34230bfca

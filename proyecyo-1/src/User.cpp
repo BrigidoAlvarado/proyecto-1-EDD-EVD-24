@@ -5,19 +5,8 @@
 
 User::User()
 {
-    this->name = "";
     this->fullName = "";
     this->password = "";
-}
-
-void User::setName(string name)
-{
-    this->name = name;
-}
-
-string User::getName()
-{
-    return this->name;
 }
 
 void User::setFullName(string fullName)

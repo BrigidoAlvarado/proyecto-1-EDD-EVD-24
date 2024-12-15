@@ -11,15 +11,12 @@ using namespace std;
 class User
 {
 private:
-    string name;
     string fullName;
     string password;
 
     public:
     User();
     //getter and setters
-    void setName(string name);
-    string getName();
     void setFullName(string fullName);
     string getFullName();
     void setPassword(string password);
