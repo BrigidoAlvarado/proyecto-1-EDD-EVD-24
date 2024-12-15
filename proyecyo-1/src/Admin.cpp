@@ -7,6 +7,7 @@ using namespace std;
 
 void Admin::enterUser()
 {
+    cout << endl;
     cout << "%%%%%%%%%%%%%%%%% Ingresar Nuevo Usuario %%%%%%%%%%%%%%%%%" << endl;
     string name;
     cout << " -> Nombre: "; cin >> name; cout << endl;
@@ -15,7 +16,7 @@ void Admin::enterUser()
     string fullName;
     cout << " -> Nombre Completo: "; cin >> fullName; cout << endl;
     string department;
-    cout << " -> Department: "; cin >> department; cout << endl;
+    cout << " -> Departmento: "; cin >> department; cout << endl;
     string company;
     cout << " -> Compania: "; cin >> company; cout << endl;
     //ingresar usuario

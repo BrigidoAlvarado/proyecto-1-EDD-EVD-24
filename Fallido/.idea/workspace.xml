@@ -31,26 +31,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b6f024a-12b7-49f3-a2a8-c06a39915c23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../proyecyo-1/includes/Admin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../proyecyo-1/includes/AdminMenu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../proyecyo-1/includes/User.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../proyecyo-1/src/Admin.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../proyecyo-1/src/AdminMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../proyecyo-1/src/User.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6bd0d65cb3a70715cb34.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-15T07-06-25-0151.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.cmake/api/v1/reply/target-proyecyo_1-Debug-d35146a4d4c9d9d0ef4d.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/proyecyo_1" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/cmake-build-debug/proyecyo_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/includes/PrincipalMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/includes/PrincipalMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecyo-1/src/PrinicipalMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/src/PrinicipalMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proyecyo-1/src/Admin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/src/Admin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proyecyo-1/src/AdminMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../proyecyo-1/src/AdminMenu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

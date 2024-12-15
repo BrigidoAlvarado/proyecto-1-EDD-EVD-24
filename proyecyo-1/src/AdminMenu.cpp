@@ -39,9 +39,11 @@ void AdminMenu::displayMenu()
                 cout << "Reporte de la matriz no disponible" << endl;
                 break;
             case 9:
-                //PrincipalMenu principalMenu = PrincipalMenu();
-                //principalMenu.displayMenu();
-                break;
+                {
+                    auto principalMenu = PrincipalMenu();
+                    principalMenu.displayMenu();
+                    break;
+                }
             default:
                 throw invalid_argument("  El valor ingresado no esta dentro de las opciones");
         }
@@ -56,4 +58,3 @@ void AdminMenu::displayMenu()
         displayMenu();
     }
 }
-
