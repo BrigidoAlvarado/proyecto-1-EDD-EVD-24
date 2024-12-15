@@ -1,0 +1,10 @@
+# ninja log v6
+10	874	1734221355914206802	CMakeFiles/Proyecto_1.dir/src/SystemMemory.cpp.o	92c23e38af1ac367
+8	873	1734221355912206796	CMakeFiles/Proyecto_1.dir/main.cpp.o	19ebf916f9a4a022
+9	893	1734221355913206799	CMakeFiles/Proyecto_1.dir/src/Login.cpp.o	789b56f0c7701303
+442	973	1734166314417550694	CMakeFiles/Proyecto_1.dir/src/admin/Admin.cpp.o	8e4d4c7e2ecc4096
+318	374	1733648332055015446	Proyecto_1	4ce32f059850e8f3
+876	1244	1734221356780209044	CMakeFiles/Proyecto_1.dir/src/admin/AdminMenu.cpp.o	e28c0e78faf2311d
+1063	1429	1734165868946380046	CMakeFiles/Proyecto_1.dir/src/SparseMatrix/SparseMatrix.cpp.o	ac1d577c6440f21b
+3	15	1734165175295349633	CMakeFiles/Proyecto_1.dir/src/avlTree/AvlTree.cpp.o	7d848d04d4f5aa54
+1015	1366	1734165893346219242	CMakeFiles/Proyecto_1.dir/src/User.cpp.o	a4f9b5789ff59422
