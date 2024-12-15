@@ -5,10 +5,12 @@
 #include <limits>
 #include <iostream>
 #include <stdexcept>
+
+#include "../includes/AdminMenu.h"
 using namespace std;
 
 const string PrincipalMenu::ADMIN_NAME = "admin";
-const string PrincipalMenu::ADMIN_USER_NAME = "admin";
+const string PrincipalMenu::ADMIN_PASSWORD = "admin";
 
 void PrincipalMenu::displayMenu()
 {
@@ -49,10 +51,36 @@ void PrincipalMenu::displayMenu()
 
 void PrincipalMenu::displayLoginMenu()
 {
-    cout << "en login";
+    cout << endl;
+    cout << "%%%%%%%%%%%%%%%%%%%% Renta de Activos %%%%%%%%%%%%%%%%%%%%" << endl;
+    cout << "%%%%%%%%%%%%%%%%%%%%       Login      %%%%%%%%%%%%%%%%%%%%" << endl;
+    cout << endl;
+    cout << "  Ingresar Nombre de Usuario: ";
+    string name;
+    cin >> name;
+    cout << endl;
+    cout << "  Ingresar Contraseña: ";
+    string password;
+    cin >> password;
+    //valida si la cuenta pertenece al administrador
+    if (validateAdminCredentials(name, password))
+    {
+        return;
+    }
+    string department;
+    cin >> department;
+    string company;
+    cin >> company;
+    //validar usuario
 }
 
-void PrincipalMenu::validateAdminCredentials(string name, string password)
+bool PrincipalMenu::validateAdminCredentials(string name, string password)
 {
-
+    if (name == ADMIN_NAME && password == ADMIN_PASSWORD)
+    {
+        AdminMenu adminMenu = AdminMenu();
+        adminMenu.displayMenu();
+        return true;
+    }
+    return false;
 }

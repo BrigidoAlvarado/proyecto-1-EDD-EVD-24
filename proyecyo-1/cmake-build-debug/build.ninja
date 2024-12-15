@@ -61,6 +61,24 @@ build CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o: CXX_COMPILER__proyecyo
   OBJECT_DIR = CMakeFiles/proyecyo_1.dir
   OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src
 
+build CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/AdminMenu.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src
+
+build CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/Admin.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src
+
+build CMakeFiles/proyecyo_1.dir/src/User.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/User.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/User.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target proyecyo_1
@@ -69,7 +87,7 @@ build CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o: CXX_COMPILER__proyecyo
 #############################################
 # Link the executable proyecyo_1
 
-build proyecyo_1: CXX_EXECUTABLE_LINKER__proyecyo_1_Debug CMakeFiles/proyecyo_1.dir/main.cpp.o CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o
+build proyecyo_1: CXX_EXECUTABLE_LINKER__proyecyo_1_Debug CMakeFiles/proyecyo_1.dir/main.cpp.o CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o CMakeFiles/proyecyo_1.dir/src/User.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/proyecyo_1.dir
   POST_BUILD = :

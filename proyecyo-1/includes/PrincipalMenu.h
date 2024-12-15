@@ -11,11 +11,11 @@ class PrincipalMenu
 {
 public:
     static const string ADMIN_NAME;
-    static const string ADMIN_USER_NAME;
+    static const string ADMIN_PASSWORD;
 
     void displayMenu();
 private:
     void displayLoginMenu();
-    void validateAdminCredentials(string name, string password);
+    bool validateAdminCredentials(string name, string password);
 };
 #endif //PRINCIPALMENU_H
