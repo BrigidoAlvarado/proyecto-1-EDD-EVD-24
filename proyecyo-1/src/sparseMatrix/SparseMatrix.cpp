@@ -1,21 +1,35 @@
 //
-// Created by brigidoalvarado on 8/12/24.
+// Created by brigidoalvarado on 15/12/24.
 //
-#include "../../includes/SparseMatrix/SparseMatrix.h"
-#include "../../includes/SparseMatrix/MatrixNode.h"
+#include "../../includes/sparseMatrix/SparseMatrix.h"
+
+#include "../../includes/Tools.h"
 
 SparseMatrix::SparseMatrix()
 {
     this->hHeader = nullptr;
-    this ->vHeader = nullptr;
+    this->vHeader = nullptr;
 }
 
-bool SparseMatrix::isEmpty()
+void SparseMatrix::insertUser(User*& user, string key, string department, string company)
 {
-    return (this->hHeader == nullptr && this->vHeader == nullptr);
+    if (isEmpty())
+    {
+        //se crean las cabeceras
+        MatrixNode *departmentHeader = insertHHeader(department);
+        MatrixNode *companyHeader = insertVHeader(company);
+        //se inserta el usuario al final de las nuevas cabeceras
+        insertAtTheEnd(user, departmentHeader, companyHeader, key);
+        cout << "  Se inserto al final";
+    }
+
+    cout << "  Usuario ingresado exitosamente" << endl;
+    Tools tools = Tools();
+    tools.pressStart();
 }
 
-MatrixNode* SparseMatrix::searchHHeader(string department)
+
+MatrixNode* SparseMatrix::searchDeparment(string department)
 {
     if (SparseMatrix::isEmpty())
     {
@@ -26,7 +40,7 @@ MatrixNode* SparseMatrix::searchHHeader(string department)
 
     while (aux != nullptr)
     {
-        if (aux->getname() == department)
+        if (aux->getKey() == department)
         {
             return aux;
         } else
@@ -37,7 +51,7 @@ MatrixNode* SparseMatrix::searchHHeader(string department)
     return nullptr;
 }
 
-MatrixNode* SparseMatrix::searchVHeader(string company)
+MatrixNode* SparseMatrix::searchCompany(string company)
 {
     if (SparseMatrix::isEmpty())
     {
@@ -47,7 +61,7 @@ MatrixNode* SparseMatrix::searchVHeader(string company)
     MatrixNode *aux = vHeader;
     while (aux != nullptr )
     {
-        if (aux->getname() == company)
+        if (aux->getKey() == company)
         {
             return aux;
         } else
@@ -58,28 +72,12 @@ MatrixNode* SparseMatrix::searchVHeader(string company)
     return nullptr;
 }
 
-void SparseMatrix::insert(User *user, string department, string company)
+void SparseMatrix::insertAtTheEnd(User*& user, MatrixNode* department, MatrixNode* company, string key)
 {
-    std::cout << "insertando uaurio..." << std::endl;
-    getchar();
-    std::cout << "despues del enter";
-    //Caso en que la matriz esta vacia
-    if (SparseMatrix::isEmpty())
-    {
-        //se crean las cabeceras
-        MatrixNode *hHeader = insertHHeader( department);
-        MatrixNode *vHeader = insertVHeader(company);
-        //se inserta el nuevo usuario al final de cada cabecera
-        insertAtTheEnd(user, hHeader, vHeader);
-    }
-}
+    MatrixNode *newUser = new MatrixNode(key, user);
 
-void SparseMatrix::insertAtTheEnd(User *&user, MatrixNode* hHeader, MatrixNode* vHeader)
-{
-    MatrixNode *newUser = new MatrixNode(user);
-
-    MatrixNode *hAux = hHeader;
-    MatrixNode *vAux = vHeader;
+    MatrixNode *hAux = department;
+    MatrixNode *vAux = company;
 
     //Buscar el ultimo nodo conectado a el departamento
     while (hAux->getdown() != nullptr)
@@ -100,7 +98,6 @@ void SparseMatrix::insertAtTheEnd(User *&user, MatrixNode* hHeader, MatrixNode* 
     newUser->setprev(vAux);
 }
 
-
 MatrixNode* SparseMatrix::insertHHeader(string department)
 {
     MatrixNode *aux = hHeader;
@@ -110,8 +107,7 @@ MatrixNode* SparseMatrix::insertHHeader(string department)
         aux = aux->getnext();
     }
 
-    MatrixNode *newDepartment = new MatrixNode();
-    newDepartment->setName(department);
+    MatrixNode *newDepartment = new MatrixNode(department);
     aux->setnext(newDepartment);
     newDepartment->setprev(aux);
     return newDepartment;
@@ -126,8 +122,15 @@ MatrixNode* SparseMatrix::insertVHeader(string company)
         aux = aux -> getdown();
     }
 
-    MatrixNode *newCompany = new MatrixNode();
-    newCompany->setName(company);
+    MatrixNode *newCompany = new MatrixNode(company);
     aux -> setDown(newCompany);
     return newCompany;
 }
+
+
+bool SparseMatrix::isEmpty()
+{
+    return (this->hHeader == nullptr && this->vHeader == nullptr);
+}
+
+

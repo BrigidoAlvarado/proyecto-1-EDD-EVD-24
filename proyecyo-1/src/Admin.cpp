@@ -4,28 +4,51 @@
 #include "../includes/Admin.h"
 #include "../includes/User.h"
 #include <iostream>
+
+#include "../includes/AdminMenu.h"
 using namespace std;
+
+Admin::Admin()
+{
+    this->sparseMatrix = new SparseMatrix();
+}
+
+Admin::Admin(SparseMatrix* sparseMatrix)
+{
+    this->sparseMatrix = sparseMatrix;
+}
+
 
 void Admin::enterUser()
 {
+    cin.clear();
+    cin.ignore();
     cout << endl;
     cout << "%%%%%%%%%%%%%%%%% Ingresar Nuevo Usuario %%%%%%%%%%%%%%%%%" << endl;
     string name;
-    cout << " -> Nombre: "; cin >> name; cout << endl;
+    cout << " -> Nombre: ";
+    getline(cin, name);
     string password;
-    cout << " -> Contraseña: "; cin >> password; cout << endl;
+    cout << " -> Contraseña: ";
+    getline(cin, password);
     string fullName;
-    cout << " -> Nombre Completo: "; cin >> fullName; cout << endl;
+    cout << " -> Nombre Completo: ";
+    getline(cin, fullName);
     string department;
-    cout << " -> Departmento: "; cin >> department; cout << endl;
+    cout << " -> Departamento: ";
+    getline(cin, department);
     string company;
-    cout << " -> Compania: "; cin >> company; cout << endl;
+    cout << " -> Compania: ";
+    getline(cin, company);
 
     //se crea un objeto de tipo usuario
     User *user = new User();
-    user->setName(name);
     user->setPassword(password);
     user->setFullName(fullName);
+    cout << "  Se creo el objeto usuario" << endl;
 
     //se inserta el nuevo usuario
+    sparseMatrix->insertUser(user, name, department, company);
+    //AdminMenu menu = AdminMenu();
+    //menu.displayMenu();
 }

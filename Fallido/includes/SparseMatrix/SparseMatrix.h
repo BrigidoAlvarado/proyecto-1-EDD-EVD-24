@@ -22,7 +22,7 @@ private:
     MatrixNode *searchVHeader(string company);
     //Insersiones
     void insertAtTheEnd(User *&user, MatrixNode *hHeader, MatrixNode *vHeader);
-
+    //inserta una nueva cabecera con el nombre del departamento
     MatrixNode *insertHHeader(string department);
     MatrixNode *insertVHeader(string company);
     //valida si la matriz es vacia

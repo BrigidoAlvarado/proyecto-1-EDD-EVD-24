@@ -13,4 +13,8 @@ add_executable(proyecyo_1 main.cpp
         includes/User.h
         src/User.cpp
         includes/sparseMatrix/MatrixNode.h
-        src/sparseMatrix/MatrixNode.cpp)
+        src/sparseMatrix/MatrixNode.cpp
+        includes/sparseMatrix/SparseMatrix.h
+        src/sparseMatrix/SparseMatrix.cpp
+        includes/Tools.h
+        src/Tools.cpp)
