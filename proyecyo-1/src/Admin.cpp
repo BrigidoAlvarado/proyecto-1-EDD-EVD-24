@@ -3,6 +3,7 @@
 //
 #include "../includes/Admin.h"
 #include "../includes/User.h"
+#include "../includes/Tools.h"
 #include <iostream>
 
 #include "../includes/AdminMenu.h"
@@ -45,10 +46,12 @@ void Admin::enterUser()
     User *user = new User();
     user->setPassword(password);
     user->setFullName(fullName);
-    cout << "  Se creo el objeto usuario" << endl;
 
     //se inserta el nuevo usuario
     sparseMatrix->insertUser(user, name, department, company);
-    //AdminMenu menu = AdminMenu();
-    //menu.displayMenu();
+    cout << endl;
+    cout << "  Usuario ingresado exitosamente" << endl;
+    Tools::pressStart(false);
+    AdminMenu menu = AdminMenu();
+    menu.displayMenu();
 }

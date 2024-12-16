@@ -8,3 +8,7 @@
 1063	1429	1734165868946380046	CMakeFiles/Proyecto_1.dir/src/SparseMatrix/SparseMatrix.cpp.o	ac1d577c6440f21b
 3	15	1734165175295349633	CMakeFiles/Proyecto_1.dir/src/avlTree/AvlTree.cpp.o	7d848d04d4f5aa54
 1015	1366	1734165893346219242	CMakeFiles/Proyecto_1.dir/src/User.cpp.o	a4f9b5789ff59422
+8	657	1734318499076993333	CMakeFiles/Proyecto_1.dir/main.cpp.o	e6ac84f1256bddb0
+9	658	1734318499078993048	CMakeFiles/Proyecto_1.dir/src/SystemMemory.cpp.o	b0f5c369a50ea632
+9	720	1734318499077993191	CMakeFiles/Proyecto_1.dir/src/Login.cpp.o	d764b41002491e82
+658	1112	1734318499726900818	CMakeFiles/Proyecto_1.dir/src/admin/AdminMenu.cpp.o	18d5715686dfba0b

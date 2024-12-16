@@ -6,10 +6,13 @@
 #include <limits>
 using namespace std;
 
-void Tools::pressStart()
+void Tools::pressStart(bool cleanBP)
 {
-    cout << "Presione Enter par continuar..." << endl;
+    cout << "  Presione Enter para continuar..." << endl;
     cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    if (cleanBP)
+    {
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
     cin.get();
 }

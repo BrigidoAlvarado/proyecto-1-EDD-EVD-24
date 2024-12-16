@@ -8,6 +8,6 @@
 class Tools
 {
     public:
-    static void pressStart();
+    static void pressStart(bool cleanBP);
 };
 #endif //TOOLS_H

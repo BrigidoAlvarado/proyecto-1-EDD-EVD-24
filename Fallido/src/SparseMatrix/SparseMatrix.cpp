@@ -10,6 +10,20 @@ SparseMatrix::SparseMatrix()
     this ->vHeader = nullptr;
 }
 
+void SparseMatrix::insert(User *user, string department, string company)
+{
+    //Caso en que la matriz esta vacia
+    if (SparseMatrix::isEmpty())
+    {
+        //se crean las cabeceras
+        MatrixNode *hHeader = insertHHeader( department);
+        MatrixNode *vHeader = insertVHeader(company);
+        //se inserta el nuevo usuario al final de cada cabecera
+        insertAtTheEnd(user, hHeader, vHeader);
+    }
+}
+
+
 bool SparseMatrix::isEmpty()
 {
     return (this->hHeader == nullptr && this->vHeader == nullptr);
@@ -58,22 +72,6 @@ MatrixNode* SparseMatrix::searchVHeader(string company)
     return nullptr;
 }
 
-void SparseMatrix::insert(User *user, string department, string company)
-{
-    std::cout << "insertando uaurio..." << std::endl;
-    getchar();
-    std::cout << "despues del enter";
-    //Caso en que la matriz esta vacia
-    if (SparseMatrix::isEmpty())
-    {
-        //se crean las cabeceras
-        MatrixNode *hHeader = insertHHeader( department);
-        MatrixNode *vHeader = insertVHeader(company);
-        //se inserta el nuevo usuario al final de cada cabecera
-        insertAtTheEnd(user, hHeader, vHeader);
-    }
-}
-
 void SparseMatrix::insertAtTheEnd(User *&user, MatrixNode* hHeader, MatrixNode* vHeader)
 {
     MatrixNode *newUser = new MatrixNode(user);
@@ -99,7 +97,6 @@ void SparseMatrix::insertAtTheEnd(User *&user, MatrixNode* hHeader, MatrixNode* 
     vAux->setnext(newUser);
     newUser->setprev(vAux);
 }
-
 
 MatrixNode* SparseMatrix::insertHHeader(string department)
 {
