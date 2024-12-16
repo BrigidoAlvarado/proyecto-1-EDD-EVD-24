@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include "../includes/AdminMenu.h"
+#include "../includes/adminReports/SparseMatrixReportGenerator.h"
 using namespace std;
 
 Admin::Admin()
@@ -18,7 +19,6 @@ Admin::Admin(SparseMatrix* sparseMatrix)
 {
     this->sparseMatrix = sparseMatrix;
 }
-
 
 void Admin::enterUser()
 {
@@ -51,7 +51,15 @@ void Admin::enterUser()
     sparseMatrix->insertUser(user, name, department, company);
     cout << endl;
     cout << "  Usuario ingresado exitosamente" << endl;
+    cout << "matriz dispersa es: " << sparseMatrix << endl;
+    cout << "cabecera es: " << sparseMatrix->getHHeader()->getKey() << " " << sparseMatrix->getVHeader()->getKey() << endl;
     Tools::pressStart(false);
-    AdminMenu menu = AdminMenu();
-    menu.displayMenu();
+}
+
+void Admin::generateSparseMatrixReport()
+{
+    cout << "matriz dispersa es: " << sparseMatrix << endl;
+    cout << "cabecera es: " << sparseMatrix->getHHeader() << " " << sparseMatrix->getVHeader() << endl;
+    SparseMatrixReportGenerator sparseMatrixReportGenerator = SparseMatrixReportGenerator(sparseMatrix);
+    sparseMatrixReportGenerator.generateReport();
 }

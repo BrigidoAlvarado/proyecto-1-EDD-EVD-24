@@ -17,4 +17,6 @@ add_executable(proyecyo_1 main.cpp
         includes/sparseMatrix/SparseMatrix.h
         src/sparseMatrix/SparseMatrix.cpp
         includes/Tools.h
-        src/Tools.cpp)
+        src/Tools.cpp
+        includes/adminReports/SparseMatrixReportGenerator.h
+        src/adminReports/SparseMatrixReportGenerator.cpp)

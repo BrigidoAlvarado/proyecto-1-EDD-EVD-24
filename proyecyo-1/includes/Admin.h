@@ -14,5 +14,6 @@ public:
     Admin();
     Admin(SparseMatrix *sparseMatrix);
     void enterUser();
+    void generateSparseMatrixReport();
 };
 #endif //ADMIN_H

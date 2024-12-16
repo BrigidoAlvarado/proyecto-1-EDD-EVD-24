@@ -37,5 +37,7 @@ private:
 public:
     SparseMatrix();
     void insertUser(User *&user, string key, string department, string company);
+    MatrixNode *getHHeader();
+    MatrixNode *getVHeader();
 };
 #endif //SPARSEMATRIX_H

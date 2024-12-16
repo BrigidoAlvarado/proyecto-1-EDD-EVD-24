@@ -11,6 +11,16 @@ SparseMatrix::SparseMatrix()
     this->vHeader = nullptr;
 }
 
+MatrixNode* SparseMatrix::getHHeader()
+{
+    return this->hHeader;
+}
+
+MatrixNode* SparseMatrix::getVHeader()
+{
+    return this->vHeader;
+}
+
 void SparseMatrix::insertUser(User*& user, string key, string department, string company)
 {
     MatrixNode *departmentHeader = nullptr;
@@ -45,7 +55,7 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
     //Caso en que la compania no se encuentra y el departameto si
     if (companyHeader == nullptr)
     {
-        insertVHeader(company);
+        companyHeader = insertVHeader(company);
         insertAtTheEnd(user, departmentHeader, companyHeader, key);
         return;
     }
@@ -53,7 +63,7 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
     //Caso en que el departamento hay que crearlo y la compania no
     if (departmentHeader == nullptr)
     {
-        insertHHeader(department);
+        departmentHeader = insertHHeader(department);
         insertAtTheEnd(user, departmentHeader, companyHeader, key);
         return;
     }
@@ -131,12 +141,12 @@ void SparseMatrix::insertAtTheEnd(User*& user, MatrixNode* department, MatrixNod
 
 void SparseMatrix::insertAtTheEndOfDepartment(User*& user, MatrixNode* department, string key)
 {
-
+    cout << "nothing";
 }
 
 void SparseMatrix::insertAtTheEndOfCompany(User*& user, MatrixNode* company, string key)
 {
-
+    cout << "nothing";
 }
 
 MatrixNode* SparseMatrix::goToDepartment(MatrixNode* node)
@@ -208,5 +218,3 @@ bool SparseMatrix::isEmpty()
 {
     return (this->hHeader == nullptr && this->vHeader == nullptr);
 }
-
-

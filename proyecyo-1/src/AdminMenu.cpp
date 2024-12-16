@@ -29,14 +29,15 @@ void AdminMenu::displayMenu()
         cout << "  Ingrese una opcion: "; cin >> option;
         if (cin.fail()) throw invalid_argument("La opcion ingresada no es numerica");
 
-        Admin admin = Admin();
         switch (option)
         {
             case 1:
-                admin.enterUser();
+                admin->enterUser();
+                displayMenu();
                 break;
             case 2:
-                cout << "Reporte de la matriz no disponible" << endl;
+                admin->generateSparseMatrixReport();
+                displayMenu();
                 break;
             case 9:
                 {
