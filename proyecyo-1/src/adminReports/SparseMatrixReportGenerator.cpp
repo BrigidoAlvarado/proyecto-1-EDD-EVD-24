@@ -133,5 +133,5 @@ void SparseMatrixReportGenerator::generateReport()
     } else {
         std::cerr << "Error al generar la imagen '" << IMAGE_NAME << "\n";
     }
-    Tools::pressStart(true);
+    Tools::pressStart(false);
 }

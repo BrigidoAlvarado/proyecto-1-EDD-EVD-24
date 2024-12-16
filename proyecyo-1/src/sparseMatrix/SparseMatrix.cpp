@@ -25,6 +25,7 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
 {
     MatrixNode *departmentHeader = nullptr;
     MatrixNode *companyHeader = nullptr;
+    MatrixNode *newUser = new MatrixNode(key, user);
 
     //Caso en que la matriz esta vacia
     if (isEmpty())
@@ -33,7 +34,7 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
         departmentHeader = insertHHeader(department);
         companyHeader = insertVHeader(company);
         //se inserta el usuario al final de las nuevas cabeceras
-        insertAtTheEnd(user, departmentHeader, companyHeader, key);
+        insertAtTheEnd(newUser, departmentHeader, companyHeader);
         return;
     }
 
@@ -48,7 +49,7 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
         departmentHeader = insertHHeader(department);
         companyHeader = insertVHeader(company);
         //se inserta el usuario al final de las cabeceras
-        insertAtTheEnd(user, departmentHeader, companyHeader, key);
+        insertAtTheEnd(newUser, departmentHeader, companyHeader);
         return;
     }
 
@@ -56,7 +57,7 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
     if (companyHeader == nullptr)
     {
         companyHeader = insertVHeader(company);
-        insertAtTheEnd(user, departmentHeader, companyHeader, key);
+        insertAtTheEnd(newUser, departmentHeader, companyHeader);
         return;
     }
 
@@ -64,8 +65,51 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
     if (departmentHeader == nullptr)
     {
         departmentHeader = insertHHeader(department);
-        insertAtTheEnd(user, departmentHeader, companyHeader, key);
+        insertAtTheEnd(newUser, departmentHeader, companyHeader);
         return;
+    }
+
+    //Caso en que el usuario debe insertarse en medio de los departamentos
+    MatrixNode *hAux = hHeader->getdown();
+    MatrixNode *userVHeader = nullptr;
+    bool down = false;
+    while ( hAux != nullptr )
+    {
+        userVHeader = goToCompany(hAux);
+        down = below( userVHeader, company);
+        if (!down) break;
+
+        hAux = hAux->getdown();
+    }
+    if (down)
+    {
+        insertAtTheEndOfDepartment(newUser, hHeader);
+    } else
+    {
+        insertAtTheHalfH(newUser, hAux);
+    }
+
+    //Caso en que el usuario debe insertarse en medio de las companias
+    MatrixNode *vAux = vHeader->getnext();
+    MatrixNode *userHHeader = nullptr;
+    bool right = false;
+
+    while ( vAux != nullptr )
+    {
+        userHHeader = goToDepartment(vAux);
+        right = futherRight(userHHeader, department);
+        if (!right)break;
+
+        vAux = vAux->getnext();
+    }
+
+    if (right)
+    {
+        insertAtTheEndOfCompany(newUser, vHeader);
+    }
+    else
+    {
+        insertAtTheHalfV(newUser, vAux);
     }
 }
 
@@ -113,40 +157,52 @@ MatrixNode* SparseMatrix::searchCompany(string company)
     return nullptr;
 }
 
-void SparseMatrix::insertAtTheEnd(User*& user, MatrixNode* department, MatrixNode* company, string key)
+void SparseMatrix::insertAtTheEnd(MatrixNode *newUser, MatrixNode* department, MatrixNode* company)
 {
-    MatrixNode *newUser = new MatrixNode(key, user);
+    insertAtTheEndOfDepartment(newUser, department);
+    insertAtTheEndOfCompany(newUser, company);
+}
 
-    MatrixNode *hAux = department;
-    MatrixNode *vAux = company;
-
+void SparseMatrix::insertAtTheEndOfDepartment(MatrixNode* user, MatrixNode* department)
+{
+    MatrixNode *aux = department;
     //Buscar el ultimo nodo conectado a el departamento
-    while (hAux->getdown() != nullptr)
+    while (aux->getdown() != nullptr)
     {
-        hAux = hAux->getdown();
+        aux = aux->getdown();
     }
     //crear la coneccion con el departamento
-    hAux->setDown(newUser);
-    newUser->setup(hAux);
+    aux->setDown(user);
+    user->setup(aux);
+}
 
+void SparseMatrix::insertAtTheEndOfCompany(MatrixNode* user, MatrixNode* company)
+{
+    MatrixNode *aux = company;
     //Buscarl el ultimo nodo conectado a la commpania
-    while (vAux->getnext() != nullptr)
+    while (aux->getnext() != nullptr)
     {
-        vAux = vAux->getnext();
+        aux = aux->getnext();
     }
     //Crear la coneccion con la compania
-    vAux->setnext(newUser);
-    newUser->setprev(vAux);
+    aux->setnext(user);
+    user->setprev(aux);
 }
 
-void SparseMatrix::insertAtTheEndOfDepartment(User*& user, MatrixNode* department, string key)
+void SparseMatrix::insertAtTheHalfV(MatrixNode* user, MatrixNode* vertical)
 {
-    cout << "nothing";
+    vertical->getprev()->setnext(user);
+    user->setnext(vertical);
+    user->setprev(vertical->getprev());
+    vertical->setprev(user);
 }
 
-void SparseMatrix::insertAtTheEndOfCompany(User*& user, MatrixNode* company, string key)
+void SparseMatrix::insertAtTheHalfH(MatrixNode* user, MatrixNode* horizontal)
 {
-    cout << "nothing";
+    horizontal->getup()->setDown(user);
+    user->setDown(horizontal);
+    user->setup(horizontal->getup());
+    horizontal->setup(user);
 }
 
 MatrixNode* SparseMatrix::goToDepartment(MatrixNode* node)
@@ -217,4 +273,32 @@ MatrixNode* SparseMatrix::insertVHeader(string company)
 bool SparseMatrix::isEmpty()
 {
     return (this->hHeader == nullptr && this->vHeader == nullptr);
+}
+
+bool SparseMatrix::below(MatrixNode* company, string key)
+{
+    MatrixNode *aux = company;
+    while (aux != nullptr)
+    {
+        if (aux->getKey() == key)
+        {
+            return true;
+        }
+        aux = aux->getdown();
+    }
+    return false;
+}
+
+bool SparseMatrix::futherRight(MatrixNode* department, string key)
+{
+    MatrixNode *aux = department;
+    while (aux != nullptr)
+    {
+        if (aux->getKey() == key)
+        {
+            return true;
+        }
+        aux = aux->getnext();
+    }
+    return false;
 }

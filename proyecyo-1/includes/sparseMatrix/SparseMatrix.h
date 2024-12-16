@@ -16,13 +16,17 @@ private:
     MatrixNode *searchDeparment(string department);
     //busca una cabezera vertical con el nombre de la compania ingresado
     MatrixNode *searchCompany(string company);
-    //Insersiones
+    //INSERSIONES
     //Inserta al final de ambas cabeceras
-    void insertAtTheEnd(User *&user, MatrixNode *department, MatrixNode *company, string key);
+    void insertAtTheEnd(MatrixNode *user, MatrixNode *department, MatrixNode *company);
     //Inserta al final de la cabecera de los departamentos
-    void insertAtTheEndOfDepartment(User *&user, MatrixNode *department, string key);
+    void insertAtTheEndOfDepartment(MatrixNode *user, MatrixNode *department);
     //inserta al final de las companias
-    void insertAtTheEndOfCompany(User *&user, MatrixNode *company, string key);
+    void insertAtTheEndOfCompany(MatrixNode *user, MatrixNode *company);
+    //inserta un usuario al medio verticalmente
+    void insertAtTheHalfV( MatrixNode *user, MatrixNode *vertical);
+    //inserta un usuario al medio horizontalmente
+    void insertAtTheHalfH( MatrixNode *user, MatrixNode *horizontal);
     //Inserta una nueva cabecera horizontal con el nombre del departamento del parametro
     MatrixNode *insertHHeader(string department);
     //Inserta una nueva cabecera vertical con el nombre de la compania del parametro
@@ -33,6 +37,10 @@ private:
     MatrixNode *goToCompany(MatrixNode *node);
     //valida si la matriz es vacia
     bool isEmpty();
+    //valida si la cabecera que busco esta mas a abajo
+    bool below(MatrixNode *company, string key);
+    //valida si la cabecera que busco esta mas a la derecha
+    bool futherRight(MatrixNode *department, string key);
 
 public:
     SparseMatrix();
