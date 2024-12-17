@@ -17,7 +17,7 @@ private:
     //busca una cabezera vertical con el nombre de la compania ingresado
     MatrixNode *searchCompany(string company);
     //Busca si existe un usuario con ese nombre en ese departamento y compania
-    MatrixNode *search(string key, MatrixNode *department, MatrixNode * company);
+        MatrixNode *search(string key, MatrixNode *department, MatrixNode * company);
     //INSERSIONES
     //Inserta al final de ambas cabeceras
     void insertAtTheEnd(MatrixNode *user, MatrixNode *department, MatrixNode *company);

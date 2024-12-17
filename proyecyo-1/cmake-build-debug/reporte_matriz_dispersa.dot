@@ -2,15 +2,59 @@ digraph SparseMatrix {
 node [shape=box];
     // Cabeceras Horizontales
     "reporte" -> "guatemala";
+    "guatemala" -> "Progreso";
+    "Progreso" -> "guatemala";
+    "Progreso" -> "Jalapa";
+    "Jalapa" -> "Progreso";
+    "Jalapa" -> "Guatemala";
+    "Guatemala" -> "Jalapa";
+    "Guatemala" -> "Peten";
+    "Peten" -> "Guatemala";
     // Coneccion entre filas
     "igss" -> elian_estrada;
     "elian_estrada" -> igss;
+    "Conagri" -> Jose;
+    "Jose" -> Conagri;
+    "Jose" -> Pedro;
+    "Pedro" -> Jose;
+    "Tigo" -> Juan;
+    "Juan" -> Tigo;
+    "Juan" -> Pablo;
+    "Pablo" -> Juan;
+    "Cinepolis" -> Maria;
+    "Maria" -> Cinepolis;
+    "Claro" -> Jeniffer;
+    "Jeniffer" -> Claro;
     // Cabeceras Verticales
     "reporte" -> "igss";
+    "igss" -> "Conagri";
+    "Conagri" -> "igss";
+    "Conagri" -> "Tigo";
+    "Tigo" -> "Conagri";
+    "Tigo" -> "Cinepolis";
+    "Cinepolis" -> "Tigo";
+    "Cinepolis" -> "Claro";
+    "Claro" -> "Cinepolis";
     // Coneccion entre filas
     "guatemala" -> elian_estrada;
     "elian_estrada" -> guatemala;
+    "Progreso" -> Jose;
+    "Jose" -> Progreso;
+    "Jose" -> Juan;
+    "Juan" -> Jose;
+    "Jalapa" -> Pablo;
+    "Pablo" -> Jalapa;
+    "Pablo" -> Jeniffer;
+    "Jeniffer" -> Pablo;
+    "Guatemala" -> Maria;
+    "Maria" -> Guatemala;
+    "Peten" -> Pedro;
+    "Pedro" -> Peten;
     // Encuadre
-    { rank=same; reporte; guatemala; }
+    { rank=same; reporte; guatemala; Progreso; Jalapa; Guatemala; Peten; }
     { rank=same; igss; elian_estrada; }
+    { rank=same; Conagri; Jose; Pedro; }
+    { rank=same; Tigo; Juan; Pablo; }
+    { rank=same; Cinepolis; Maria; }
+    { rank=same; Claro; Jeniffer; }
 }
