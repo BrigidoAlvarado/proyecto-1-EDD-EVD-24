@@ -21,6 +21,41 @@ MatrixNode* SparseMatrix::getVHeader()
     return this->vHeader;
 }
 
+
+User* SparseMatrix::getUser(string name, string password, string department, string company)
+{
+    //primero se busca el departamento
+    MatrixNode *auxDepartment = hHeader;
+    while (auxDepartment != nullptr)
+    {
+        if (auxDepartment->getKey() == department)
+        {
+            //buscar la compania
+            MatrixNode *user = auxDepartment->getdown();
+            while (user != nullptr)
+            {
+                MatrixNode *userCompany = goToCompany(user);
+                if (userCompany->getKey() == company)
+                {
+                    //se busca el nombre de usuario y la contrasenia
+                    MatrixNode *posiblyUser = user;
+                    while (posiblyUser != nullptr)
+                    {
+                        if (posiblyUser->getKey() == name && posiblyUser->getuser()->getPassword() == password)
+                        {
+                            return posiblyUser->getuser();
+                        }
+                        posiblyUser = posiblyUser->getbackward();
+                    }
+                }
+                user = user->getdown();
+            }
+        }
+        auxDepartment = auxDepartment->getnext();
+    }
+    return nullptr;
+}
+
 void SparseMatrix::insertUser(User*& user, string key, string department, string company)
 {
     MatrixNode *departmentHeader = nullptr;
@@ -69,8 +104,16 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
         return;
     }
 
-    //Caso en que el usuario debe insertarse en medio de los departamentos
-    MatrixNode *hAux = hHeader->getdown();
+    //Insertar el usuario detras de otro con las mismas cabeceras
+    MatrixNode *lastUser = search(key ,departmentHeader, companyHeader);
+    if (lastUser != nullptr)
+    {
+        insertBack(newUser, lastUser);
+        return;
+    }
+
+    //Insertar el usuario en medio verticalmente
+    MatrixNode *hAux = departmentHeader->getdown();
     MatrixNode *userVHeader = nullptr;
     bool down = false;
     while ( hAux != nullptr )
@@ -83,14 +126,14 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
     }
     if (down)
     {
-        insertAtTheEndOfDepartment(newUser, hHeader);
+        insertAtTheEndOfDepartment(newUser, departmentHeader);
     } else
     {
         insertAtTheHalfH(newUser, hAux);
     }
 
-    //Caso en que el usuario debe insertarse en medio de las companias
-    MatrixNode *vAux = vHeader->getnext();
+    //Insertar el usuario en medio horizontalmente
+    MatrixNode *vAux = companyHeader->getnext();
     MatrixNode *userHHeader = nullptr;
     bool right = false;
 
@@ -112,7 +155,6 @@ void SparseMatrix::insertUser(User*& user, string key, string department, string
         insertAtTheHalfV(newUser, vAux);
     }
 }
-
 
 MatrixNode* SparseMatrix::searchDeparment(string department)
 {
@@ -205,6 +247,12 @@ void SparseMatrix::insertAtTheHalfH(MatrixNode* user, MatrixNode* horizontal)
     horizontal->setup(user);
 }
 
+void SparseMatrix::insertBack(MatrixNode* user, MatrixNode* forward)
+{
+    user->setForward(forward);
+    forward->setBackward(user);
+}
+
 MatrixNode* SparseMatrix::goToDepartment(MatrixNode* node)
 {
     MatrixNode *aux = node;
@@ -223,6 +271,22 @@ MatrixNode* SparseMatrix::goToCompany(MatrixNode* node)
     while (aux->getprev() != nullptr)
     {
         aux = aux->getprev();
+    }
+    return aux;
+}
+
+MatrixNode* SparseMatrix::goToBack(MatrixNode* node, string userName)
+{
+    MatrixNode *aux = node;
+    while (aux->getbackward() != nullptr)
+    {
+        if (aux->getKey() == userName)
+        {
+            std::cout << "  El nombre de usuario: " << userName << endl;
+            std::cout << "  Ya se encuentra registrado en este departamento y esta compania..." << endl;
+            return nullptr;
+        }
+        aux = aux->getbackward();
     }
     return aux;
 }
@@ -268,6 +332,22 @@ MatrixNode* SparseMatrix::insertVHeader(string company)
 
     aux -> setDown(newCompany);
     return newCompany;
+}
+
+MatrixNode* SparseMatrix::search(string key, MatrixNode* department, MatrixNode* company)
+{
+    MatrixNode *auxDepartment = department->getdown();
+
+    while (auxDepartment != nullptr)
+    {
+        MatrixNode *auxCompany = goToCompany(auxDepartment);
+        if (auxCompany->getKey() == company->getKey())
+        {
+            return goToBack(auxDepartment, key);
+        }
+        auxDepartment = auxDepartment->getdown();
+    }
+return auxDepartment;
 }
 
 bool SparseMatrix::isEmpty()

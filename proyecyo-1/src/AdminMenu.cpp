@@ -11,9 +11,9 @@
 #include "../includes/PrincipalMenu.h"
 using namespace std;
 
-AdminMenu::AdminMenu()
+AdminMenu::AdminMenu(Admin *admin)
 {
-    this->admin = new Admin();
+    this->admin = admin;
 }
 
 void AdminMenu::displayMenu()
@@ -41,7 +41,7 @@ void AdminMenu::displayMenu()
                 break;
             case 9:
                 {
-                    auto principalMenu = PrincipalMenu();
+                    auto principalMenu = PrincipalMenu(admin->getSparseMatrix());
                     principalMenu.displayMenu();
                     break;
                 }

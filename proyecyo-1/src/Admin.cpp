@@ -51,15 +51,17 @@ void Admin::enterUser()
     sparseMatrix->insertUser(user, name, department, company);
     cout << endl;
     cout << "  Usuario ingresado exitosamente" << endl;
-    cout << "matriz dispersa es: " << sparseMatrix << endl;
-    cout << "cabecera es: " << sparseMatrix->getHHeader()->getKey() << " " << sparseMatrix->getVHeader()->getKey() << endl;
     Tools::pressStart(false);
 }
 
 void Admin::generateSparseMatrixReport()
 {
-    cout << "matriz dispersa es: " << sparseMatrix << endl;
-    cout << "cabecera es: " << sparseMatrix->getHHeader() << " " << sparseMatrix->getVHeader() << endl;
     SparseMatrixReportGenerator sparseMatrixReportGenerator = SparseMatrixReportGenerator(sparseMatrix);
     sparseMatrixReportGenerator.generateReport();
 }
+
+SparseMatrix* Admin::getSparseMatrix()
+{
+    return this->sparseMatrix;
+}
+

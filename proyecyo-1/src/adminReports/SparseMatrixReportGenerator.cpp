@@ -128,10 +128,11 @@ void SparseMatrixReportGenerator::generateReport()
     string command = "dot -Tpng " + FILE_NAME + " -o " + IMAGE_NAME;
     int result = system(command.c_str());
 
+    std::cout << std::endl;
     if (result == 0) {
-        std::cout << "Imagen '" << IMAGE_NAME << "' generada correctamente.\n";
+        std::cout << "  Imagen '" << IMAGE_NAME << "' generada correctamente.\n";
     } else {
-        std::cerr << "Error al generar la imagen '" << IMAGE_NAME << "\n";
+        std::cerr << "  Error al generar la imagen '" << IMAGE_NAME << "\n";
     }
-    Tools::pressStart(false);
+    Tools::pressStart(true);
 }

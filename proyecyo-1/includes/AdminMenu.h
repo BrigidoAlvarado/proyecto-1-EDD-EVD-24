@@ -11,7 +11,7 @@ class AdminMenu
 private:
     Admin *admin;
 public:
-    AdminMenu();
+    AdminMenu(Admin *admin);
     void displayMenu();
 };
 #endif //ADMINMENU_H

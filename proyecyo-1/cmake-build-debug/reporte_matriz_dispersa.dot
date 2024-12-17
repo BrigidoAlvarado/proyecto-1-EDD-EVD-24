@@ -2,37 +2,31 @@ digraph SparseMatrix {
 node [shape=box];
     // Cabeceras Horizontales
     "reporte" -> "Guatemala";
-    "Guatemala" -> "Totonicapan";
-    "Totonicapan" -> "Guatemala";
-    "Totonicapan" -> "Juatiapa";
-    "Juatiapa" -> "Totonicapan";
+    "Guatemala" -> "Xela";
+    "Xela" -> "Guatemala";
     // Coneccion entre filas
     "Max" -> Brigido;
     "Brigido" -> Max;
-    "Brigido" -> Ronald;
-    "Ronald" -> Brigido;
-    "Cinepolis" -> Josias;
-    "Josias" -> Cinepolis;
-    "CocaCola" -> Bernardo;
-    "Bernardo" -> CocaCola;
+    "Tigo" -> Naomi;
+    "Naomi" -> Tigo;
+    "Claro" -> Ronald;
+    "Ronald" -> Claro;
     // Cabeceras Verticales
     "reporte" -> "Max";
-    "Max" -> "Cinepolis";
-    "Cinepolis" -> "Max";
-    "Cinepolis" -> "CocaCola";
-    "CocaCola" -> "Cinepolis";
+    "Max" -> "Tigo";
+    "Tigo" -> "Max";
+    "Tigo" -> "Claro";
+    "Claro" -> "Tigo";
     // Coneccion entre filas
     "Guatemala" -> Brigido;
     "Brigido" -> Guatemala;
-    "Brigido" -> Josias;
-    "Josias" -> Brigido;
-    "Totonicapan" -> Ronald;
-    "Ronald" -> Totonicapan;
-    "Juatiapa" -> Bernardo;
-    "Bernardo" -> Juatiapa;
+    "Brigido" -> Ronald;
+    "Ronald" -> Brigido;
+    "Xela" -> Naomi;
+    "Naomi" -> Xela;
     // Encuadre
-    { rank=same; reporte; Guatemala; Totonicapan; Juatiapa; }
-    { rank=same; Max; Brigido; Ronald; }
-    { rank=same; Cinepolis; Josias; }
-    { rank=same; CocaCola; Bernardo; }
+    { rank=same; reporte; Guatemala; Xela; }
+    { rank=same; Max; Brigido; }
+    { rank=same; Tigo; Naomi; }
+    { rank=same; Claro; Ronald; }
 }

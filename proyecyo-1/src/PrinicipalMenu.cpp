@@ -12,6 +12,17 @@ using namespace std;
 const string PrincipalMenu::ADMIN_NAME = "admin";
 const string PrincipalMenu::ADMIN_PASSWORD = "admin";
 
+PrincipalMenu::PrincipalMenu()
+{
+    this->matrix = new SparseMatrix();
+}
+
+PrincipalMenu::PrincipalMenu(SparseMatrix* matrix)
+{
+    this->matrix = matrix;
+}
+
+
 void PrincipalMenu::displayMenu()
 {
     try
@@ -78,7 +89,7 @@ bool PrincipalMenu::validateAdminCredentials(string name, string password)
 {
     if (name == ADMIN_NAME && password == ADMIN_PASSWORD)
     {
-        AdminMenu adminMenu = AdminMenu();
+        AdminMenu adminMenu = AdminMenu(new Admin(matrix));
         adminMenu.displayMenu();
         return true;
     }
