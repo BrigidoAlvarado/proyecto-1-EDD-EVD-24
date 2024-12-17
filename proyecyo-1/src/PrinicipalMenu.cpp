@@ -116,32 +116,32 @@ void PrincipalMenu::init()
     matrix->insertUser(elian_estrada, "elian_estrada", "guatemala", "igss");
 
     Asset *a1 = new Asset();
-    a1->setId(Tools::idGenerator());
+    //a1->setId(Tools::idGenerator());
     a1->setName("madera");
     a1->setDescription("madera para albañil");
     a1->setRentTime(20);
-    elian_estrada->getAssets()->insert(a1->getId(),a1);
+    elian_estrada->getAssets()->insert( Tools::idGenerator(),a1);
 
     Asset *a2 = new Asset();
-    a2->setId(Tools::idGenerator());
+    //a2->setId(Tools::idGenerator());
     a2->setName("martillos");
     a2->setDescription("martillos para madera");
     a2->setRentTime(10);
-    elian_estrada->getAssets()->insert(a2->getId(),a2);
+    elian_estrada->getAssets()->insert(Tools::idGenerator(),a2);
 
     Asset *a3 = new Asset();
-    a3->setId(Tools::idGenerator());
+    //a3->setId(Tools::idGenerator());
     a3->setName("caladora");
     a3->setDescription("caladora para cortar maderas prefabricadas");
     a3->setRentTime(15);
-    elian_estrada->getAssets()->insert(a3->getId(),a3);
+    elian_estrada->getAssets()->insert(Tools::idGenerator(),a3);
 
     Asset *a4 = new Asset();
-    a4->setId(Tools::idGenerator());
+    //a4->setId(Tools::idGenerator());
     a4->setName("barreno");
     a4->setDescription("barreno para concreto");
     a4->setRentTime(5);
-    elian_estrada->getAssets()->insert(a4->getId(),a4);
+    elian_estrada->getAssets()->insert(Tools::idGenerator(),a4);
 //////////
     User *juanito = new User();
     juanito->setFullName("Juan Perez");

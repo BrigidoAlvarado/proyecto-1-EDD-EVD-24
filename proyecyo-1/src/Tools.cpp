@@ -20,15 +20,15 @@ void Tools::pressStart(bool cleanBP)
     cin.get();
 }
 
-string Tools::idGenerator()
-{
+std::string Tools::idGenerator() {
     const int idLength = 15; // Longitud del ID
-    const std::string chars = "abcdefghijklmnopqrstuvwxyz0123456789"; // Letras minúsculas y números
+    const std::string chars = "abcdefghijklmnopqrstuvwxyz0123456789";
     std::string randomID;
 
-    // Generador de números aleatorios
-    std::mt19937 rng(static_cast<unsigned int>(std::time(nullptr))); // Semilla basada en tiempo
-    std::uniform_int_distribution<> dist(0, chars.size() - 1); // Rango de índices
+    // Generador de números aleatorios con una semilla más variable
+    std::random_device rd;
+    std::mt19937 rng(rd()); // Inicialización del generador con una semilla de hardware
+    std::uniform_int_distribution<> dist(0, chars.size() - 1);
 
     for (int i = 0; i < idLength; ++i) {
         randomID += chars[dist(rng)];

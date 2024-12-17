@@ -55,3 +55,14 @@
 1723	2179	1734444001252799494	CMakeFiles/proyecyo_1.dir/src/avlTree/AvlTree.cpp.o	3c412a25ec8c1ebe
 2146	2491	1734444001675809477	CMakeFiles/proyecyo_1.dir/src/adminReports/UserAvlReportGenerator.cpp.o	8b6767f53cf1756d
 2491	2546	1734444002020817620	proyecyo_1	fe42738c40e5f4b7
+3	894	1734454790269565384	CMakeFiles/proyecyo_1.dir/main.cpp.o	c9e16f166c5fc454
+5	936	1734454790271565382	CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o	eee5bbe3f0d1feb4
+5	1151	1734454790271565382	CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o	1da72b0c262275fe
+936	1513	1734454791202564693	CMakeFiles/proyecyo_1.dir/src/sparseMatrix/SparseMatrix.cpp.o	1c92a5d20ed2adc7
+895	1537	1734454791161564724	CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o	e21ea37c5d2ddf2e
+1151	1839	1734454791419564533	CMakeFiles/proyecyo_1.dir/src/adminReports/SparseMatrixReportGenerator.cpp.o	f0cbf5381ab9f1f6
+1839	1920	1734454792105564026	proyecyo_1	fe42738c40e5f4b7
+2	502	1734455263598845043	CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o	1da72b0c262275fe
+503	570	1734455264099831395	proyecyo_1	fe42738c40e5f4b7
+1	626	1734456062529894268	CMakeFiles/proyecyo_1.dir/src/Tools.cpp.o	2bdd301d9a402a60
+626	694	1734456063153888283	proyecyo_1	fe42738c40e5f4b7
