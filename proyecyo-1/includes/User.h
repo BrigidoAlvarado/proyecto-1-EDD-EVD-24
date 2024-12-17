@@ -6,6 +6,8 @@
 #define USER_H
 
 #include <iostream>
+
+#include "avlTree/AvlTree.h"
 using namespace std;
 
 class User
@@ -13,6 +15,7 @@ class User
 private:
     string fullName;
     string password;
+    AvlTree *assets;
 
     public:
     User();
@@ -21,5 +24,6 @@ private:
     string getFullName();
     void setPassword(string password);
     string getPassword();
+    AvlTree *getAssets();
 };
 #endif //USER_H

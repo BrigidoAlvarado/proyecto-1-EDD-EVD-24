@@ -17,6 +17,7 @@ public:
     PrincipalMenu();
     PrincipalMenu(SparseMatrix *matrix);
     void displayMenu();
+    void init();
 private:
     SparseMatrix *matrix;
     void displayLoginMenu();

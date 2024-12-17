@@ -52,6 +52,7 @@ public:
     SparseMatrix();
     void insertUser(User *&user, string key, string department, string company);
     User *getUser(string name, string password, string department, string company);
+    User *getUser(string name, string department, string company);
     MatrixNode *getHHeader();
     MatrixNode *getVHeader();
 };

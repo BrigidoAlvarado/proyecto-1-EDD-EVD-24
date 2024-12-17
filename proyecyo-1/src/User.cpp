@@ -7,6 +7,7 @@ User::User()
 {
     this->fullName = "";
     this->password = "";
+    this->assets = new AvlTree();
 }
 
 void User::setFullName(string fullName)
@@ -27,4 +28,9 @@ void User::setPassword(string password)
 string User::getPassword()
 {
     return this->password;
+}
+
+AvlTree *User::getAssets()
+{
+    return this->assets;
 }

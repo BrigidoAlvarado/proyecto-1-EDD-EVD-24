@@ -21,4 +21,12 @@ add_executable(proyecyo_1 main.cpp
         includes/adminReports/SparseMatrixReportGenerator.h
         src/adminReports/SparseMatrixReportGenerator.cpp
         includes/UserMenu.h
-        src/UserMenu.cpp)
+        src/UserMenu.cpp
+        src/avlTree/AvlNode.cpp
+        includes/avlTree/AvlTree.h
+        includes/avlTree/AvlNode.h
+        src/avlTree/AvlTree.cpp
+        includes/Asset.h
+        src/Asset.cpp
+        includes/adminReports/UserAvlReportGenerartor.h
+        src/adminReports/UserAvlReportGenerator.cpp)

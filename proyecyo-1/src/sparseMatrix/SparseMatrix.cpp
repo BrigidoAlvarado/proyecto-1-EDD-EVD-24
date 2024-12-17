@@ -56,6 +56,41 @@ User* SparseMatrix::getUser(string name, string password, string department, str
     return nullptr;
 }
 
+User* SparseMatrix::getUser(string name, string department, string company)
+{
+    //primero se busca el departamento
+    MatrixNode *auxDepartment = hHeader;
+    while (auxDepartment != nullptr)
+    {
+        if (auxDepartment->getKey() == department)
+        {
+            //buscar la compania
+            MatrixNode *user = auxDepartment->getdown();
+            while (user != nullptr)
+            {
+                MatrixNode *userCompany = goToCompany(user);
+                if (userCompany->getKey() == company)
+                {
+                    //se busca el nombre de usuario y la contrasenia
+                    MatrixNode *posiblyUser = user;
+                    while (posiblyUser != nullptr)
+                    {
+                        if (posiblyUser->getKey() == name)
+                        {
+                            return posiblyUser->getuser();
+                        }
+                        posiblyUser = posiblyUser->getbackward();
+                    }
+                }
+                user = user->getdown();
+            }
+        }
+        auxDepartment = auxDepartment->getnext();
+    }
+    return nullptr;
+}
+
+
 void SparseMatrix::insertUser(User*& user, string key, string department, string company)
 {
     MatrixNode *departmentHeader = nullptr;

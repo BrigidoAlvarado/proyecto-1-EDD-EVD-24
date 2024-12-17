@@ -24,6 +24,7 @@ void AdminMenu::displayMenu()
         cout << "%%%%%%%%%%%%%%%%%%% Menú Administrador %%%%%%%%%%%%%%%%%%%" << endl;
         cout << "%% 1. Registrar Usuario" << endl;
         cout << "%% 2. Reporte Matriz Dispersa" << endl;
+        cout << "%% 6. Reporte Activos de un Usuario" << endl;
         cout << "%% 9. Cerrar Sesion" << endl;
         int option;
         cout << "  Ingrese una opcion: "; cin >> option;
@@ -39,10 +40,12 @@ void AdminMenu::displayMenu()
                 admin->generateSparseMatrixReport();
                 displayMenu();
                 break;
+            case 6:
+                admin->generateAvlUserReport();
+                displayMenu();
+                break;
             case 9:
                 {
-                    auto principalMenu = PrincipalMenu(admin->getSparseMatrix());
-                    principalMenu.displayMenu();
                     break;
                 }
             default:

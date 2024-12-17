@@ -7,6 +7,8 @@
 #include <stdexcept>
 
 #include "../includes/AdminMenu.h"
+#include "../includes/UserMenu.h"
+#include "../includes/Tools.h"
 using namespace std;
 
 const string PrincipalMenu::ADMIN_NAME = "admin";
@@ -21,7 +23,6 @@ PrincipalMenu::PrincipalMenu(SparseMatrix* matrix)
 {
     this->matrix = matrix;
 }
-
 
 void PrincipalMenu::displayMenu()
 {
@@ -54,7 +55,6 @@ void PrincipalMenu::displayMenu()
         cout << endl;
         cout << e.what() << endl;
         cout << "  Enter para continuar...";
-
         cin.get();
         displayMenu();
     }
@@ -69,7 +69,6 @@ void PrincipalMenu::displayLoginMenu()
     cout << "  Ingresar Nombre de Usuario: ";
     string name;
     cin >> name;
-    cout << endl;
     cout << "  Ingresar Contraseña: ";
     string password;
     cin >> password;
@@ -79,10 +78,22 @@ void PrincipalMenu::displayLoginMenu()
         return;
     }
     string department;
-    cin >> department;
+    cout << "  Ingresar Departemento: " ; cin >> department;
     string company;
-    cin >> company;
-    //validar usuario
+    cout << "  Ingresar Compania: "; cin >> company;
+    //validar inicio de sesion de usuario
+    User *user = matrix->getUser(name, password, department, company);
+
+    if (user != nullptr)
+    {
+        UserMenu *userMenu = new UserMenu(user);
+        userMenu->displayMenu();
+    } else
+    {
+        cout << "  Usuario no encontrado" << endl;
+        Tools::pressStart(true);
+    }
+    displayMenu();
 }
 
 bool PrincipalMenu::validateAdminCredentials(string name, string password)
@@ -91,7 +102,17 @@ bool PrincipalMenu::validateAdminCredentials(string name, string password)
     {
         AdminMenu adminMenu = AdminMenu(new Admin(matrix));
         adminMenu.displayMenu();
+        displayMenu();
         return true;
     }
     return false;
 }
+
+void PrincipalMenu::init()
+{
+    User *elian_estrada = new User();
+    elian_estrada->setPassword("1234");
+    elian_estrada->setFullName("Elian Estrada");
+    matrix->insertUser(elian_estrada, "elian_estrada", "guatemala", "igss");
+}
+

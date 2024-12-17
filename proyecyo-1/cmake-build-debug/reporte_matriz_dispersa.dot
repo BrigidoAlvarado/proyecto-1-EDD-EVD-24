@@ -1,32 +1,16 @@
 digraph SparseMatrix {
 node [shape=box];
     // Cabeceras Horizontales
-    "reporte" -> "Guatemala";
-    "Guatemala" -> "Xela";
-    "Xela" -> "Guatemala";
+    "reporte" -> "guatemala";
     // Coneccion entre filas
-    "Max" -> Brigido;
-    "Brigido" -> Max;
-    "Tigo" -> Naomi;
-    "Naomi" -> Tigo;
-    "Claro" -> Ronald;
-    "Ronald" -> Claro;
+    "igss" -> elian_estrada;
+    "elian_estrada" -> igss;
     // Cabeceras Verticales
-    "reporte" -> "Max";
-    "Max" -> "Tigo";
-    "Tigo" -> "Max";
-    "Tigo" -> "Claro";
-    "Claro" -> "Tigo";
+    "reporte" -> "igss";
     // Coneccion entre filas
-    "Guatemala" -> Brigido;
-    "Brigido" -> Guatemala;
-    "Brigido" -> Ronald;
-    "Ronald" -> Brigido;
-    "Xela" -> Naomi;
-    "Naomi" -> Xela;
+    "guatemala" -> elian_estrada;
+    "elian_estrada" -> guatemala;
     // Encuadre
-    { rank=same; reporte; Guatemala; Xela; }
-    { rank=same; Max; Brigido; }
-    { rank=same; Tigo; Naomi; }
-    { rank=same; Claro; Ronald; }
+    { rank=same; reporte; guatemala; }
+    { rank=same; igss; elian_estrada; }
 }

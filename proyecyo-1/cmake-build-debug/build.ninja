@@ -109,6 +109,30 @@ build CMakeFiles/proyecyo_1.dir/src/UserMenu.cpp.o: CXX_COMPILER__proyecyo_1_uns
   OBJECT_DIR = CMakeFiles/proyecyo_1.dir
   OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src
 
+build CMakeFiles/proyecyo_1.dir/src/avlTree/AvlNode.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/avlTree/AvlNode.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/avlTree/AvlNode.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src/avlTree
+
+build CMakeFiles/proyecyo_1.dir/src/avlTree/AvlTree.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/avlTree/AvlTree.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/avlTree/AvlTree.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src/avlTree
+
+build CMakeFiles/proyecyo_1.dir/src/Asset.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/Asset.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/Asset.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src
+
+build CMakeFiles/proyecyo_1.dir/src/adminReports/UserAvlReportGenerator.cpp.o: CXX_COMPILER__proyecyo_1_unscanned_Debug /home/brigidoalvarado/Documentos/proyecto-1-EDD/proyecyo-1/src/adminReports/UserAvlReportGenerator.cpp || cmake_object_order_depends_target_proyecyo_1
+  DEP_FILE = CMakeFiles/proyecyo_1.dir/src/adminReports/UserAvlReportGenerator.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/proyecyo_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/proyecyo_1.dir/src/adminReports
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target proyecyo_1
@@ -117,7 +141,7 @@ build CMakeFiles/proyecyo_1.dir/src/UserMenu.cpp.o: CXX_COMPILER__proyecyo_1_uns
 #############################################
 # Link the executable proyecyo_1
 
-build proyecyo_1: CXX_EXECUTABLE_LINKER__proyecyo_1_Debug CMakeFiles/proyecyo_1.dir/main.cpp.o CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o CMakeFiles/proyecyo_1.dir/src/User.cpp.o CMakeFiles/proyecyo_1.dir/src/sparseMatrix/MatrixNode.cpp.o CMakeFiles/proyecyo_1.dir/src/sparseMatrix/SparseMatrix.cpp.o CMakeFiles/proyecyo_1.dir/src/Tools.cpp.o CMakeFiles/proyecyo_1.dir/src/adminReports/SparseMatrixReportGenerator.cpp.o CMakeFiles/proyecyo_1.dir/src/UserMenu.cpp.o
+build proyecyo_1: CXX_EXECUTABLE_LINKER__proyecyo_1_Debug CMakeFiles/proyecyo_1.dir/main.cpp.o CMakeFiles/proyecyo_1.dir/src/PrinicipalMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/AdminMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/Admin.cpp.o CMakeFiles/proyecyo_1.dir/src/User.cpp.o CMakeFiles/proyecyo_1.dir/src/sparseMatrix/MatrixNode.cpp.o CMakeFiles/proyecyo_1.dir/src/sparseMatrix/SparseMatrix.cpp.o CMakeFiles/proyecyo_1.dir/src/Tools.cpp.o CMakeFiles/proyecyo_1.dir/src/adminReports/SparseMatrixReportGenerator.cpp.o CMakeFiles/proyecyo_1.dir/src/UserMenu.cpp.o CMakeFiles/proyecyo_1.dir/src/avlTree/AvlNode.cpp.o CMakeFiles/proyecyo_1.dir/src/avlTree/AvlTree.cpp.o CMakeFiles/proyecyo_1.dir/src/Asset.cpp.o CMakeFiles/proyecyo_1.dir/src/adminReports/UserAvlReportGenerator.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/proyecyo_1.dir
   POST_BUILD = :

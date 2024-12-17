@@ -1,0 +1,12 @@
+digraph userAvlTree {
+node [shape=circle, style=filled, color=lightblue];
+    "3mx7omtxu1k7u9b" [label="3mx7omtxu1k7u9b\nNombre: aa"];
+    "3mx7omtxu1k7u9b" -> "08nespjo67b16ab";
+    "08nespjo67b16ab" [label="08nespjo67b16ab\nNombre: bb"];
+    "3mx7omtxu1k7u9b" -> "e9lzon9osa9mbjm";
+    "e9lzon9osa9mbjm" [label="e9lzon9osa9mbjm\nNombre: dd"];
+    "e9lzon9osa9mbjm" -> "75b544enu4lkvtn";
+    "75b544enu4lkvtn" [label="75b544enu4lkvtn\nNombre: ee"];
+    "e9lzon9osa9mbjm" -> "fxyum52pzmswi9s";
+    "fxyum52pzmswi9s" [label="fxyum52pzmswi9s\nNombre: cc"];
+}

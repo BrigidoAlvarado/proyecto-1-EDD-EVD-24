@@ -8,6 +8,7 @@
 
 #include "../includes/AdminMenu.h"
 #include "../includes/adminReports/SparseMatrixReportGenerator.h"
+#include "../includes/adminReports/UserAvlReportGenerartor.h"
 using namespace std;
 
 Admin::Admin()
@@ -65,3 +66,25 @@ SparseMatrix* Admin::getSparseMatrix()
     return this->sparseMatrix;
 }
 
+void Admin::generateAvlUserReport()
+{
+    cout << endl;
+    cout << "%%%%%%%%%%%%%%%%%%% Activos de un usuario %%%%%%%%%%%%%%%%%%%" << endl;
+    string name;
+    cout << " -> Nombre: "; cin >> name;
+    string department;
+    cout << " -> Departamento: "; cin >> department;
+    string company;
+    cout << " -> Compania: "; cin >> company;
+    User *user = sparseMatrix->getUser(name, department, company);
+    cout << endl;
+
+    if (user == nullptr)
+    {
+        cout << "  Usuario ingresado no existe" << endl;
+    } else
+    {
+        UserAvlReportGenerartor *report = new UserAvlReportGenerartor();
+        report->genetateReport(user->getAssets());
+    }
+}
